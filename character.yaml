@@ -1,0 +1,5 @@
+singer_type: utau
+image: image.bmp            # 這是頭像
+portrait_file: full_body.jpg # 這是全身立繪
+portrait_height: 800         # 調整這個數字可以改變她在畫面的大小
+text_encoding: utf-8

@@ -1,0 +1,22 @@
+name: Diva Auto Unzip
+on:
+  push:
+    paths:
+      - 'diva_data.zip'
+jobs:
+  unzip_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Extract Diva Data
+        run: |
+          unzip -o diva_data.zip
+          rm diva_data.zip
+      - name: Commit and Push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Diva Bot"
+          git add .
+          git commit -m "Auto unzip [skip ci]" || echo "No changes"
+          git push

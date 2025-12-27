@@ -1,0 +1,4 @@
+name=Google Diva V3
+image=image.bmp
+author=20130
+sample=?.wav
